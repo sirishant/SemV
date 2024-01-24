@@ -1,0 +1,41 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             INSTURCTIONSET6, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E3A0010E        MOV              R0, #0X80000003
+    4 00000004 E1B010E0        MOVS             R1, R0, ROR #1
+    5 00000008 EAFFFFFE 
+                       L       B                L
+    6 0000000C                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\instructionset6.d -o.\
+instructionset6.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\
+ARM\Inc\Philips --predefine="__EVAL SETA 1" --list=.\instructionset6.lst instru
+ctionset6.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+INSTURCTIONSET6 00000000
+
+Symbol: INSTURCTIONSET6
+   Definitions
+      At line 1 in file instructionset6.s
+   Uses
+      None
+Comment: INSTURCTIONSET6 unused
+L 00000008
+
+Symbol: L
+   Definitions
+      At line 5 in file instructionset6.s
+   Uses
+      At line 5 in file instructionset6.s
+Comment: L used once
+2 symbols
+333 symbols in table

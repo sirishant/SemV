@@ -1,0 +1,51 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             termwork_1a,CODE,READONLY
+    2 00000000                 ENTRY                        ;MARK THE FIRST INS
+                                                            TRUCTION EXECUTION
+    3 00000000 E3A0000F        MOV              R0,#0X0F    ;COPY THE VALUE 0X0
+                                                            F INTO R0
+    4 00000004 E3A01027        MOV              R1,#0X27    ;COPY THE VALUE 0X2
+                                                            7 INTO R1
+    5 00000008         
+    6 00000008 E0802001        ADD              R2,R0,R1    ;ADD R0 AND R1, PLA
+                                                            CE RESULT IN R2
+    7 0000000C E0413000        SUB              R3,R1,R0    ;SUB R0 FROM R1, PL
+                                                            ACE RESULT IN R3
+    8 00000010 E0040190        MUL              R4,R0,R1    ;MUL R0 AND R1, PLA
+                                                            CE RESULT IN R4
+    9 00000014         
+   10 00000014 EAFFFFFE 
+                       L       B                L
+   11 00000018                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\termwork_1a.d -o.\term
+work_1a.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\
+Philips --predefine="__EVAL SETA 1" --list=.\termwork_1a.lst termwork_1a.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+L 00000014
+
+Symbol: L
+   Definitions
+      At line 10 in file termwork_1a.s
+   Uses
+      At line 10 in file termwork_1a.s
+Comment: L used once
+termwork_1a 00000000
+
+Symbol: termwork_1a
+   Definitions
+      At line 1 in file termwork_1a.s
+   Uses
+      None
+Comment: termwork_1a unused
+2 symbols
+333 symbols in table

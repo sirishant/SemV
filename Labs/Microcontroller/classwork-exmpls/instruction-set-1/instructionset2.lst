@@ -1,0 +1,41 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             INSTRUCTIONSET2,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000 E3A00030        MOV              R0, #0X30
+    4 00000004 E1E01000        MVN              R1, R0
+    5 00000008 EAFFFFFE 
+                       L       B                L
+    6 0000000C                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\instructionset2.d -o.\
+instructionset2.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\
+ARM\Inc\Philips --predefine="__EVAL SETA 1" --list=.\instructionset2.lst instru
+ctionset2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+INSTRUCTIONSET2 00000000
+
+Symbol: INSTRUCTIONSET2
+   Definitions
+      At line 1 in file instructionset2.s
+   Uses
+      None
+Comment: INSTRUCTIONSET2 unused
+L 00000008
+
+Symbol: L
+   Definitions
+      At line 5 in file instructionset2.s
+   Uses
+      At line 5 in file instructionset2.s
+Comment: L used once
+2 symbols
+333 symbols in table

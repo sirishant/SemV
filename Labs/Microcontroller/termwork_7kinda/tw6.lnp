@@ -1,0 +1,7 @@
+--cpu ARM7TDMI
+".\startup.o"
+".\tw6.o"
+--library_type=microlib --strict --scatter ".\tw6.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\tw6.map" -o .\tw6.axf

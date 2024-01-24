@@ -1,0 +1,56 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             TW3, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E3A00006        MOV              R0, #6
+    4 00000004 E1A01000        MOV              R1, R0
+    5 00000008 E2511001 
+                       FACT    SUBS             R1, #1
+    6 0000000C E3510001        CMP              R1, #1
+    7 00000010 0A000002        BEQ              L
+    8 00000014 E0030190        MUL              R3, R0, R1
+    9 00000018 E1A00003        MOV              R0, R3
+   10 0000001C 1AFFFFF9        BNE              FACT
+   11 00000020 EAFFFFFE 
+                       L       B                L
+   12 00000024                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\tw3.d -o.\tw3.o -IC:\K
+eil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=.\tw3.lst tw3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FACT 00000008
+
+Symbol: FACT
+   Definitions
+      At line 5 in file tw3.s
+   Uses
+      At line 10 in file tw3.s
+Comment: FACT used once
+L 00000020
+
+Symbol: L
+   Definitions
+      At line 11 in file tw3.s
+   Uses
+      At line 7 in file tw3.s
+      At line 11 in file tw3.s
+
+TW3 00000000
+
+Symbol: TW3
+   Definitions
+      At line 1 in file tw3.s
+   Uses
+      None
+Comment: TW3 unused
+3 symbols
+334 symbols in table

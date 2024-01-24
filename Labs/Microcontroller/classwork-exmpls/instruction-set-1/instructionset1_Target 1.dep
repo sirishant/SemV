@@ -1,0 +1,2 @@
+Dependencies for Project 'instructionset1', Target 'Target 1': (DO NOT MODIFY !)
+F (.\instructionset6.s)(0x6556ED1E)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\instructionset6.lst --xref -o .\instructionset6.o --depend .\instructionset6.d)
