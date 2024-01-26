@@ -7,7 +7,7 @@
         Write a menu driven program to do the following: 
         1) Transfer the contents of the input file to the destination file using the 
         ByteArrayInputStream/ByteArrayOutputStream class 
-        3) Display the contents of the destination file.
+        2) Display the contents of the destination file.
 
 */
 
