@@ -1,0 +1,91 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             tw2,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000 E3A0000A        MOV              R0, #10
+    4 00000004 E59F101C        LDR              R1, =FBLOCK
+    5 00000008 E59F201C        LDR              R2, =SBLOCK
+    6 0000000C E0D130B1 
+                       GOTO    LDRH             R3, [R1], #1
+    7 00000010 E0C230B1        STRH             R3, [R2], #1
+    8 00000014 E2500001        SUBS             R0, #1
+    9 00000018 1AFFFFFB        BNE              GOTO
+   10 0000001C EAFFFFFE 
+                       L       B                L
+   11 00000020 34 12 78 
+              56 BC 9A 
+              76 98    FBLOCK  DCW              0X1234, 0X5678, 0X9ABC, 0X9876
+   12 00000028 00000000 
+              00000000         AREA             MYDATA, DATA, READWRITE
+   13 00000000 00 00   SBLOCK  DCW              0
+   14 00000002                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\tw2.d -o.\tw2.o -IC:\K
+eil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=.\tw2.lst tw2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FBLOCK 00000020
+
+Symbol: FBLOCK
+   Definitions
+      At line 11 in file tw2.s
+   Uses
+      At line 4 in file tw2.s
+Comment: FBLOCK used once
+GOTO 0000000C
+
+Symbol: GOTO
+   Definitions
+      At line 6 in file tw2.s
+   Uses
+      At line 9 in file tw2.s
+Comment: GOTO used once
+L 0000001C
+
+Symbol: L
+   Definitions
+      At line 10 in file tw2.s
+   Uses
+      At line 10 in file tw2.s
+Comment: L used once
+tw2 00000000
+
+Symbol: tw2
+   Definitions
+      At line 1 in file tw2.s
+   Uses
+      None
+Comment: tw2 unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MYDATA 00000000
+
+Symbol: MYDATA
+   Definitions
+      At line 12 in file tw2.s
+   Uses
+      None
+Comment: MYDATA unused
+SBLOCK 00000000
+
+Symbol: SBLOCK
+   Definitions
+      At line 13 in file tw2.s
+   Uses
+      At line 5 in file tw2.s
+Comment: SBLOCK used once
+2 symbols
+339 symbols in table
